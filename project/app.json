@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "O mu Bu mu",
+    "slug": "bolt-expo-nativewind",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "omu-bumu",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Turnuva görselleri seçmek için fotoğraflarına erişmemiz gerekiyor."
+        }
+      ],
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "cf0e35d9-40a9-45f9-a6f9-5d2c038856aa"
+      }
+    },
+    "android": {
+      "package": "com.halilbircan1.boltexponativewind"
+    }
+  }
+}

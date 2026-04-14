@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Kendi modülünüzde NavHostFragment android:navGraph="@navigation/nav_graph" ile bağlayın.
+  Paket adı com.example.app değilse R sınıfı yolunu güncelleyin.
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.app.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.app.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_createTestFragment"
+            app:destination="@id/createTestFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createTestFragment"
+        android:name="com.example.app.ui.createtest.CreateTestFragment"
+        android:label="Create test"
+        tools:layout="@layout/fragment_create_test">
+        <action
+            android:id="@+id/action_createTestFragment_to_testPublishedFragment"
+            app:destination="@id/testPublishedFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/testPublishedFragment"
+        android:name="com.example.app.ui.published.TestPublishedFragment"
+        android:label="Published"
+        tools:layout="@layout/fragment_test_published" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.app.ui.profile.ProfileFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>
